@@ -33,6 +33,17 @@ enum custom_keycodes {
 #define KC_RVAI RGB_VAI
 #define KC_RVAD RGB_VAD
 
+#define KC_CLBR RALT(KC_7)
+#define KC_LBR RALT(KC_8)
+#define KC_RBR RALT(KC_9)
+#define KC_CRBR RALT(KC_0)
+#define KC_PIP RALT(KC_NUBS)
+#define KC_TIL RALT(KC_RBRC)
+#define KC_BSLH RALT(KC_MINS)
+#define KC_ATAB LALT(KC_TAB)
+#define KC_EUR RALT(KC_E)
+#define KC_ATQ RALT(KC_Q)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT_kc(
@@ -43,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
      LSFT, A  , S  , D  , F  , G  ,                H  , J  , K  , L  ,SCLN,QUOT,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-     LCTL, Z  , X  , C  , V  , B  ,RASE,     RASE, N  , M  ,COMM,DOT ,SLSH,RALT,
+     LCTL, Z  , X  , C  , V  , B  ,RASE,     RASE, N  , M  ,COMM,DOT ,SLSH,DEL ,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                        LGUI,LOWR,ENT ,         SPC ,LOWR,LALT
   //                  `----+----+----'        `----+----+----'
@@ -53,11 +64,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
      F12 , F1 , F2 , F3 , F4 , F5 ,                F6 , F7 , F8 , F9 ,F10 ,F11 ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,RBRC,MINS,GRV ,    ,    ,               HOME,PGUP, UP ,PGDN,MINS,RBRC,
+     ATAB,ATQ ,    ,EUR ,    ,    ,               HOME,PGUP, UP ,PGDN,MINS,RBRC,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-     LSFT,NUBS,NUHS,    ,    ,    ,               END ,LEFT,DOWN,RGHT,NUHS,NUBS,
+     LSFT,    ,    ,EQL ,GRV ,    ,               END ,LEFT,DOWN,RGHT,NUHS,NUBS,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-     LCTL,    ,    ,    ,    ,RALT,    ,         ,    ,    ,    ,    ,    ,RALT,
+     LCTL,BSLH,TIL ,PIP ,CLBR,LBR ,    ,         ,RBR ,CRBR,PIP ,TIL ,BSLH,INS ,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                        LGUI,    ,LALT,         LGUI,    ,LALT
   //                  `----+----+----'        `----+----+----'
@@ -65,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,INS ,DEL ,
+         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
          ,    ,WSCH,MAIL,    ,    ,                   ,VOLU,    ,MPRV,MPLY,MNXT,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
