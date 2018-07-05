@@ -1,7 +1,6 @@
 # ftl
 
-ftl's layout for German Programmer  
-see [here](../../../../users/ftl) for more informations.
+ftl's layout for German Programmer, see [here](https://github.com/ftl) for more informations.
 
 ## License
 
